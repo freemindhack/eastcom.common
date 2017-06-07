@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 曲线模板特点：渐变背景、无边框、可多曲线  -->
+<anychart>
+	<settings><animation enabled="True" /></settings>
+	<margin left="2" right="2" top="0" bottom="2" />
+	<charts>
+		<chart plot_type="CategorizedVertical">
+			<chart_settings>
+				<title enabled="false"><text>图表标题</text></title>
+				<legend enabled="true" position="Bottom" align="Spread"
+					ignore_auto_item="false">
+					<format>{%Icon}{%Name}</format>
+					<title enabled="false" />
+					<background><fill opacity="0.5" color="#dfe8f6" /></background>
+				</legend>
+				<axes>
+					<x_axis>
+						<title enabled="false"><text>X轴标题</text></title>
+						<zoom enabled="false" allow_drag="false" visible_range="7" />
+					</x_axis>
+					<y_axis>
+						<title enabled="false"><text>Y轴标题</text></title>
+					</y_axis>
+				</axes>
+				<controls>
+	 	          <label position="top" align="Near">
+	 	          <margin left="-50" top="" right="" bottom="-3"></margin>
+	 	          </label>
+ 	        	</controls>
+				<chart_background>
+					<fill type="Gradient" opacity="0.2">
+						<gradient angle="90">
+							<key position="0" color="#dfe8f6" />
+							<key position="1" color="DarkColor(#dfe8f6)" />
+						</gradient>
+					</fill>
+					<border enabled="false" />
+				</chart_background>
+				<data_plot_background>
+					<fill opacity="0.2" color="#dfe8f6" />
+				</data_plot_background>
+			</chart_settings>
+			<data_plot_settings default_series_type="Spline">
+				<line_series>
+					<line_style><line thickness="4" /></line_style>
+					<marker_settings><marker size="8" /></marker_settings>
+					<tooltip_settings enabled="True">
+						<background><border color="DarkColor(%Color)" /></background>
+						<format><![CDATA[{%SeriesName}\n{%Name}\n{%Value}{numDecimals:0}]]></format>
+					</tooltip_settings>
+					<label_settings enabled="false">
+						<position padding="0"></position>
+						<format>{%YValue}{numDecimals:0}</format>
+					</label_settings>
+				</line_series>
+			</data_plot_settings>
+			<data></data>
+		</chart>
+	</charts>
+</anychart>

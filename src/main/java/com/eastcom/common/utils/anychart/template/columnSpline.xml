@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 柱状图和曲线组合模板特点：渐变背景、无边框、可多柱状/多曲线  -->
+<anychart>
+	<settings><animation enabled="True" /></settings>
+	<margin left="2" right="2" top="0" bottom="2" />
+	<charts>
+		<chart plot_type="CategorizedVertical">
+			<data_plot_settings default_series_type="Bar" enable_3d_mode="false">
+				<bar_series point_padding="0.0" group_padding="1" style="AquaLight">
+					<label_settings enabled="false">
+						<position padding="0"></position>
+						<font color="blue"></font>
+						<format>{%Value}{numDecimals:0}</format>
+					</label_settings>
+					<bar_style>
+						<fill opacity="1" />
+						<states><hover><hatch_fill enabled="true" type="Percent50" color="%Color" opacity="1" /></hover></states>
+					</bar_style>
+					<tooltip_settings enabled="False">
+						<format><![CDATA[{%SeriesName}\n{%Name}\n{%Value}{numDecimals:0}]]></format>
+						<background><corners type="Rounded" all="3" /></background>
+					</tooltip_settings>
+					<interactivity use_hand_cursor="false" allow_select="false" />
+				</bar_series>
+				<line_series>
+					<label_settings enabled="false">
+						<position padding="0"></position>
+						<format><![CDATA[{%Value}{numDecimals:0}]]></format>
+					</label_settings>
+					<tooltip_settings enabled="False">
+						<background>
+							<border color="DarkColor(%Color)" />
+						</background>
+						<format><![CDATA[{%SeriesName}\n{%Name}\n{%Value}{numDecimals:2}%]]></format>
+					</tooltip_settings>
+					<line_style><line thickness="4" /></line_style>
+					<marker_settings>
+						<marker size="8" />
+						<states><hover><marker size="12" /></hover></states>
+					</marker_settings>
+				</line_series>
+			</data_plot_settings>
+			<chart_settings>
+				<title enabled="false"><text>图表标题</text></title>
+				<legend enabled="false" position="Bottom" align="Spread" ignore_auto_item="false">
+					<title enabled="false" />
+					<format>{%Icon}{%Name}</format>
+					<background><fill opacity="0.5" color="#dfe8f6" /></background>
+				</legend>
+				<axes>
+					<y_axis position="Left">
+						<title enabled="false"><text>左边Y轴标题</text></title>
+						<labels><format>{%Value}{numDecimals:0}</format></labels>
+					</y_axis>
+					<extra>
+						<y_axis name="y_axis_right">
+							<title enabled="false"><text>右边Y轴标题</text></title>
+							<labels><format>{%Value}{numDecimals:0}%</format></labels>
+						</y_axis>
+					</extra>
+					<x_axis>
+						<title enabled="false"><text>X轴标题</text></title>
+						<zoom enabled="false" allow_drag="false" visible_range="7" />
+						<labels rotation="0"></labels>
+						<major_grid interlaced="true">
+							<interlaced_fills>
+								<even><fill enabled="true" type="Solid" color="Rgb(210,210,210)" opacity="0.3" /></even>
+								<odd><fill enabled="true" type="Solid" color="White" opacity="0.3" /></odd>
+							</interlaced_fills>
+						</major_grid>
+					</x_axis>
+				</axes>
+				<controls>
+	 	          <label position="top" align="Near">
+	 	          	<margin left="-50" top="" right="" bottom="-3"></margin>
+	 	          </label>
+ 	        	</controls>
+				<chart_background>
+					<fill type="Gradient" opacity="0.2">
+						<gradient angle="90">
+							<key position="0" color="#dfe8f6" />
+							<key position="1" color="DarkColor(#dfe8f6)" />
+						</gradient>
+					</fill>
+					<border enabled="false" />
+				</chart_background>
+				<data_plot_background>
+					<fill opacity="0.2" color="#dfe8f6" />
+				</data_plot_background>
+			</chart_settings>
+			<data></data>
+		</chart>
+	</charts>
+</anychart>
